@@ -3,13 +3,18 @@ using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    public int _currentScore = 0;
+    public static int CurrentScore = 0;
+
+    private void Start()
+    {
+        CurrentScore = 0;
+    }
 
     public void IncrementScore()
     {
-        _currentScore++;
+        CurrentScore++;
         Text scoreText = GetComponent<Text>();
-        scoreText.text = "Score: " + _currentScore.ToString();
+        scoreText.text = "Score: " + CurrentScore.ToString();
     }
 
 }
