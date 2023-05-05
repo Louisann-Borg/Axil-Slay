@@ -10,8 +10,7 @@ public class Axil : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool pressedJumpButton = Input.GetButtonDown("Jump");
-        if (pressedJumpButton)
+        if (Input.GetMouseButtonDown(0))
         {
             Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
             rigidbody.velocity = Vector3.zero;
